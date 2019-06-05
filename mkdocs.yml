@@ -1,0 +1,7 @@
+site_name: Ensaio
+theme:
+  name: 'material'
+
+nav:
+    - Home: index.md
+    - Referências: referencias.md
