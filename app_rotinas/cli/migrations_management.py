@@ -1,9 +1,9 @@
+from os import sep
 from subprocess import call
 
 import click
 
-
-path_ini_alembic_file = 'app_config/config_files/alembic.ini'
+path_ini_alembic_file = 'app_config/config_files/alembic.ini'.replace('/', sep)
 
 
 @click.group('db')
@@ -15,7 +15,10 @@ def db():
 @click.option('-m', 'message', default='migração via CLI',
               help='Mensagem para identificar a migrations do alembic')
 def makemigration(message):
-    call(['alembic', '-c', path_ini_alembic_file, 'revision', '-m', message])
+    call(
+        ['alembic', '-c', path_ini_alembic_file, 'revision', '--autogenerate',
+         '-m', message]
+    )
 
 
 @db.command()
