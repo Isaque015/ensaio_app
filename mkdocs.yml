@@ -6,4 +6,4 @@ nav:
     - Home: index.md
     - Referências: referencias.md
     - Configurando o ambiente: ambiente.md
-    - Banco de dados: banco_dados.md
+    - CLI: cli.md
