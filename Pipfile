@@ -13,6 +13,7 @@ click = "*"
 alembic = "*"
 mkdocs = "*"
 mkdocs-material = "*"
+pyside2 = "*"
 
 [requires]
 python_version = "3.7"
