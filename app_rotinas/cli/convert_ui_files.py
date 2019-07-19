@@ -1,5 +1,4 @@
-from os import sep
-from subprocess import call
+from os import sep, system
 
 import click
 
@@ -16,7 +15,6 @@ def convert_ui(ui, py):
 
     path_screens = 'app_source' + sep + 'screens' + sep
 
-    file_ui = path_screens + ui + '.ui'
-    file_py = path_screens + py + '.py'
-
-    call(['pyside2-uic', file_ui, '>', file_py])
+    file_ui = path_screens + 'GUI' + sep + ui + '.ui'
+    file_py = path_screens + 'gui_py' + sep + py + '.py'
+    system('pyside2-uic ' + file_ui + ' > ' + file_py)
