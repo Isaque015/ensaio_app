@@ -14,6 +14,7 @@ alembic = "*"
 mkdocs = "*"
 mkdocs-material = "*"
 pyside2 = "*"
+kivy = "*"
 
 [requires]
 python_version = "3.7"

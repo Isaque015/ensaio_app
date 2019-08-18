@@ -1,0 +1,19 @@
+#:import ContarInstrumentosTela contar_instrumentos
+#:import Ensaios ensaios
+
+<GerenciadorTelas>
+    Screen:
+        name: 'gerenciador'
+        FloatLayout:
+            Button:
+                text: "Contar Instrumentos"
+                pos_hint: {'x': .4, 'y': .6}
+                size_hint: .2, .1
+                on_release: root.current = 'contar_instrumentos'
+            Button:
+                text: "Ensaios"
+                pos_hint: {'x': .4, 'y': .48}
+                size_hint: .2, .1
+                on_release: root.current = 'ensaios'
+    ContarInstrumentosTela:
+    Ensaios:
